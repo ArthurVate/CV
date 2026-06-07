@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artur Khryshchanovich | Product Manager Portfolio</title>
+    
+    <meta name="description" content="Professional Product Manager Portfolio of Artur Khryshchanovich. Focus on Growth, Product Strategy, AI Integration, and Technical Automation.">
+    <meta property="og:title" content="Artur Khryshchanovich | Product Manager Portfolio">
+    <meta property="og:description" content="Driving international business impact through data-driven product management and technical excellence.">
+    <meta property="og:image" content="6.png">
+    <meta property="og:type" content="profile">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #f5f5f7;
+            --secondary-text: #a1a1a6;
+            --accent-color: #2997ff;
+            --card-bg: #1c1c1e;
+            --border-color: #424245;
+            --nav-bg: rgba(0, 0, 0, 0.8);
+            --funnel-bg: rgba(41, 151, 255, 0.1);
+            --ai-accent: #a370ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        section { padding: 120px 20px; max-width: 1200px; margin: 0 auto; }
+        h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.015em; }
+        h2 { font-size: 44px; text-align: center; margin-bottom: 60px; background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Sticky Navigation Bar */
+        nav {
+            position: fixed; top: 0; width: 100%; height: 52px;
+            background: var(--nav-bg); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color); z-index: 1000;
+        }
+        .nav-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 20px; }
+        .nav-logo { font-weight: 700; font-size: 16px; letter-spacing: 0.5px; text-decoration: none; color: var(--text-color); }
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-size: 13px; opacity: 0.7; transition: opacity 0.2s; }
+        .nav-links a:hover { opacity: 1; color: var(--accent-color); }
+        .btn-nav { background: var(--accent-color); color: #fff !important; padding: 6px 14px; border-radius: 980px; opacity: 1 !important; font-weight: 500; }
+        .btn-nav:hover { opacity: 0.9 !important; }
+
+        /* Premium Hero Layout */
+        .hero-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; min-height: 95vh; padding-top: 60px; }
+        .hero-text { text-align: left; }
+        .hero-title { font-size: 58px; line-height: 1.1; margin-bottom: 15px; background: linear-gradient(135deg, #ffffff 0%, #86868b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { font-size: 24px; color: var(--accent-color); font-weight: 500; margin-bottom: 25px; }
+        .hero-desc { font-size: 18px; color: var(--secondary-text); max-width: 550px; margin-bottom: 35px; }
+        
+        .hero-meta-list { list-style: none; font-size: 15px; color: var(--secondary-text); margin-bottom: 40px; }
+        .hero-meta-list li { margin-bottom: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+        .hero-meta-list li strong { color: #fff; }
+        .hero-meta-list a { color: var(--accent-color); text-decoration: none; }
+        
+        /* Interactive Messenger Action Buttons */
+        .messenger-row { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+        .messenger-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; text-decoration: none; padding: 6px 14px; border-radius: 8px; color: #fff; transition: transform 0.2s, opacity 0.2s; }
+        .messenger-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .tg-btn { background: #0088cc; }
+        .wa-btn { background: #25d366; }
+        .vb-btn { background: #7351f1; }
+
+        .hero-img-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; }
+        .hero-showcase-img { width: 100%; max-width: 440px; height: auto; border-radius: 28px; object-fit: cover; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+
+        /* Product Mindset Cards (New Block) */
+        .mindset-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 20px; }
+        .mindset-card { background: linear-gradient(145deg, #1c1c1e 0%, #0c0c0e 100%); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.03); text-align: left; }
+        .mindset-card i { font-size: 28px; color: var(--accent-color); margin-bottom: 20px; display: block; }
+        .mindset-card h3 { font-size: 20px; color: #fff; margin-bottom: 12px; }
+        .mindset-card p { color: var(--secondary-text); font-size: 14px; line-height: 1.5; }
+
+        /* Layout Grids */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        
+        /* Product Operating System Dashboard */
+        .os-card { background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s; }
+        .os-card:hover { transform: translateY(-5px); border-color: var(--border-color); }
+        .os-card h3 { font-size: 22px; margin-bottom: 15px; color: #fff; }
+        .os-card p { color: var(--secondary-text); font-size: 15px; }
+        .os-icon { font-size: 32px; margin-bottom: 15px; display: block; }
+
+        /* Experience Timeline */
+        .timeline { border-left: 1px solid var(--border-color); margin-left: 10px; padding-left: 35px; }
+        .job-entry { position: relative; margin-bottom: 70px; }
+        .job-entry::before { content: ''; position: absolute; left: -43px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent-color); box-shadow: 0 0 10px var(--accent-color); }
+        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .job-title { font-size: 26px; color: #fff; }
+        .company-name { font-size: 18px; color: var(--accent-color); font-weight: 500; margin-top: 2px; }
+        .job-date { color: var(--secondary-text); font-size: 14px; background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 12px; }
+        
+        .job-list { list-style: none; font-size: 15px; color: var(--secondary-text); margin-bottom: 20px; }
+        .job-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .job-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent-color); }
+
+        /* Interactive Toggle Case Study CSS */
+        .case-toggle-btn { background: rgba(41, 151, 255, 0.1); border: 1px solid rgba(41, 151, 255, 0.3); color: var(--accent-color); padding: 10px 20px; font-size: 13px; font-weight: 600; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
+        .case-toggle-btn:hover { background: rgba(41, 151, 255, 0.2); }
+        .case-content-wrapper { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1); margin-top: 15px; }
+        .case-content-wrapper.active { max-height: 1000px; }
+        .case-body-box { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 16px; padding: 25px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .case-step h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-color); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .case-step p { font-size: 14px; color: var(--text-color); }
+
+        /* Dynamic Radar Section */
+        .skills-dashboard { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; background: var(--card-bg); padding: 40px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.05); }
+        .chart-container { position: relative; width: 100%; height: 100%; min-height: 380px; display: flex; justify-content: center; align-items: center; }
+        .skills-description h3 { font-size: 24px; margin-bottom: 15px; }
+        .skills-list-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; list-style: none; margin-bottom: 25px; }
+        .skills-list-tags li { background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); padding: 6px 14px; border-radius: 12px; font-size: 13px; color: var(--text-color); }
+
+        /* Interactive Growth Visuals */
+        .funnel-container { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 20px 0; }
+        .funnel-layer { width: 100%; height: 55px; background: var(--funnel-bg); margin-bottom: 8px; border-radius: 14px; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; border: 1px solid rgba(41, 151, 255, 0.2); transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .funnel-layer span:last-child { font-weight: 700; color: var(--accent-color); }
+        .fl-1 { width: 100%; } .fl-2 { width: 85%; } .fl-3 { width: 70%; } .fl-4 { width: 55%; border-color: #32d74b; background: rgba(50, 215, 75, 0.1); }
+        .fl-4 span:last-child { color: #32d74b; }
+
+        .roadmap-list { display: flex; flex-direction: column; gap: 15px; }
+        .roadmap-node { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 20px; border-radius: 16px; display: flex; gap: 20px; align-items: center; }
+        .node-status { padding: 4px 12px; border-radius: 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .ns-shipped { background: rgba(50, 215, 75, 0.15); color: #32d74b; }
+        .ns-now { background: rgba(255, 159, 10, 0.15); color: #ff9f0a; }
+        .ns-next { background: rgba(41, 151, 255, 0.15); color: var(--accent-color); }
+
+        /* AI Case Study Badges */
+        .ai-portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .ai-card { background: var(--card-bg); padding: 35px; border-radius: 24px; border: 1px solid rgba(163, 112, 255, 0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .ai-badge { align-self: flex-start; background: rgba(163, 112, 255, 0.15); color: #a370ff; padding: 4px 12px; border-radius: 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; }
+        .ai-card-metrics { display: flex; gap: 40px; margin-top: 25px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        .metric-item { display: flex; flex-direction: column; }
+        .m-val { font-size: 36px; font-weight: 700; color: var(--accent-color); line-height: 1.1; }
+        .m-lbl { font-size: 11px; color: var(--secondary-text); text-transform: uppercase; margin-top: 4px; letter-spacing: 1px; }
+
+        /* Universal Footer & Contacts */
+        footer { background: var(--card-bg); border-top: 1px solid var(--border-color); padding: 80px 20px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; }
+        .footer-brand h4 { font-size: 20px; margin-bottom: 15px; }
+        .footer-brand p { color: var(--secondary-text); font-size: 14px; max-width: 320px; }
+        .footer-box h5 { font-size: 14px; text-transform: uppercase; color: var(--secondary-text); margin-bottom: 15px; letter-spacing: 1px; }
+        .footer-links-list { list-style: none; }
+        .footer-links-list li { margin-bottom: 14px; font-size: 15px; color: var(--secondary-text); }
+        .footer-links-list strong { color: #fff; }
+        .footer-links-list a { color: var(--accent-color); text-decoration: none; }
+        .footer-bottom { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 12px; color: var(--secondary-text); }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; justify-items: center; min-height: auto; padding-bottom: 50px; }
+            .hero-text { text-align: center; display: flex; flex-direction: column; align-items: center; }
+            .hero-title { font-size: 46px; }
+            .hero-meta-list li { align-items: center; }
+            .mindset-grid { grid-template-columns: 1fr; }
+            .skills-dashboard { grid-template-columns: 1fr; }
+            .case-body-box { grid-template-columns: 1fr; gap: 15px; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media (max-width: 768px) {
+            h2 { font-size: 32px; }
+            section { padding: 70px 20px; }
+            .grid-2, .grid-3, .ai-portfolio-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; align-items: flex-start; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#hero" class="nav-logo">ARTUR KHRYSHCHANOVICH</a>
+            <ul class="nav-links">
+                <li><a href="#mindset">Product Mindset</a></li>
+                <li><a href="#os">Product OS</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Competencies</a></li>
+                <li><a href="#growth">Strategy Flow</a></li>
+                <li><a href="#ai">AI Portfolio</a></li>
+                <li><a href="#contact-anchor" class="btn-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-text" data-aos="fade-right">
+                <h1 class="hero-title">Artur Khryshchanovich</h1>
+                <p class="hero-subtitle">Product Manager</p>
+                <p class="hero-desc">Leveraging an automation engineering background and data-driven frameworks to scale products, optimize user experiences, and lead cross-functional development.</p>
+                <ul class="hero-meta-list">
+                    <li><strong>Location:</strong> Minsk, Belarus (Available for business travel)</li>
+                    <li><strong>Email:</strong> <a href="mailto:arthurvate@gmail.com">arthurvate@gmail.com</a></li>
+                    <li>
+                        <strong>Phone & Messengers:</strong> <a href="tel:+375336201260">+375 (33) 6201260</a>
+                        <div class="messenger-row">
+                            <a href="https://t.me/arthurvate" target="_blank" class="messenger-btn tg-btn"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                            <a href="https://wa.me/375336201260" target="_blank" class="messenger-btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="viber://chat?number=%2B375336201260" class="messenger-btn vb-btn"><i class="fab fa-viber"></i> Viber</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero-img-wrapper" data-aos="fade-left">
+                <img src="6.png" alt="Artur Khryshchanovich" class="hero-showcase-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="mindset" style="padding-top: 40px; padding-bottom: 40px;">
+        <div data-aos="fade-up" style="text-align: center;">
+            <h2>Product Mindset & Core Pillars</h2>
+            <div class="mindset-grid">
+                <div class="mindset-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data-Driven Growth</h3>
+                    <p>"I don't rely on gut feeling. I validate feature hypotheses using statistical data modeling, comprehensive A/B tests, and actionable user metrics."</p>
+                </div>
+                <div class="mindset-card">
+                    <i class="fas fa-users"></i>
+                    <h3>User-Centric Discovery</h3>
+                    <p>"10 hours of talking directly to target users through CustDev loops easily eliminates 100+ hours of wasted cross-functional engineering time."</p>
+                </div>
+                <div class="mindset-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Automation First</h3>
+                    <p>"If an internal workflow or a content generation pipeline can be automated with customized AI script layers, it shouldn't consume manual labor."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="os">
+        <div data-aos="fade-up">
+            <h2>Product Operating System</h2>
+            <div class="grid-3">
+                <div class="os-card">
+                    <span class="os-icon">🎯</span>
+                    <h3>Product Strategy & Vision</h3>
+                    <p>Aligning foundational business goals with detailed market insights, competitive intelligence, and verified user needs.</p>
+                </div>
+                <div class="os-card">
+                    <span class="os-icon">🔬</span>
+                    <h3>Continuous Discovery</h3>
+                    <p>Validating core features and growth hypotheses utilizing rigorous Customer Development interviews and quantitative A/B testing.</p>
+                </div>
+                <div class="os-card">
+                    <span class="os-icon">🤖</span>
+                    <h3>AI & Technical Levers</h3>
+                    <p>Deploying advanced generative neural networks and automated logic straight into manufacturing workflows and content distribution channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div data-aos="fade-up">
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Product Manager</h3>
+                            <div class="company-name">Online School - Simulator for Training (IT / EdTech)</div>
+                        </div>
+                        <span class="job-date">Nov 2023 — May 2026</span>
+                    </div>
+                    <ul class="job-list">
+                        <li>Formulated and directed end-to-end product strategy matching structural market potential and core corporate indicators.</li>
+                        <li>Assigned technical directives and coordinated cross-functional execution teams including engineers, managers, content marketers, UI/UX designers, data analysts, and third-party contractors.</li>
+                        <li>Guided the user lifecycle journey across standard progression stages: Ideation → Launch → Conversion Optimization → Scaling.</li>
+                        <li>Monitored crucial business KPIs: active engagement curves, user retention habits, sales conversions, and CAC/ROI health metrics.</li>
+                        <li>Structured operations, financial accounting configurations, customer service inquiries, and resolution systems.</li>
+                        <li>Discovered high-yielding acquisition vectors and structured an entire branded physical merch ecosystem from scratch featuring 20+ custom lifestyle products.</li>
+                        <li>Headed the digital marketing department, driving multichannel distribution footprints across YouTube, Instagram, TikTok, and Telegram with integrated AI content pipelines.</li>
+                    </ul>
+                    
+                    <button class="case-toggle-btn" onclick="toggleCase('case1', this)">
+                        <i class="fas fa-folder-open"></i> View Metrics & Action Plan
+                    </button>
+                    <div id="case1" class="case-content-wrapper">
+                        <div class="case-body-box">
+                            <div class="case-step">
+                                <h4>Context / Metric Challenge</h4>
+                                <p>User churn curves indicated drop-offs at early platform interactions. Needed to stabilize core onboarding funnel paths without increasing paid ad spend metrics.</p>
+                            </div>
+                            <div class="case-step">
+                                <h4>Strategic Action Taken</h4>
+                                <p>Conducted 25+ CustDev user sessions. Completely restructured onboarding loops using predictive interactive components and launched automated AI content models.</p>
+                            </div>
+                            <div class="case-step">
+                                <h4>Validated KPI Result</h4>
+                                <p style="color: #32d74b; font-weight: 600;">+14% User Retention boost, -22% User Acquisition Cost (CAC) drop, and scaled an extra branded merch e-commerce ecosystem from 0 to 20+ SKU units.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Automation Engineer & Technical Sales Manager</h3>
+                            <div class="company-name">Kugel (Official HIWIN Distributor)</div>
+                        </div>
+                        <span class="job-date">Apr 2020 — Nov 2023</span>
+                    </div>
+                    <ul class="job-list">
+                        <li>Managed continuous business communication and vendor negotiations in English with international manufacturers (HIWIN, Bosch Rexroth, INA, SKF, KSK, KHP).</li>
+                        <li>Audited technical blueprints, drafted parts specifications, and produced proprietary custom 3D system assemblies inside Fusion 360, SolidWorks, and AutoCAD.</li>
+                        <li>Spearheaded B2B corporate sales pipelines for highly sophisticated industrial robotic setups and costly production components.</li>
+                        <li>Compiled technical catalogs, conducted internal training classes, and represented company assets at international machinery conventions.</li>
+                    </ul>
+                    
+                    <button class="case-toggle-btn" onclick="toggleCase('case2', this)">
+                        <i class="fas fa-folder-open"></i> View Technical Case Study
+                    </button>
+                    <div id="case2" class="case-content-wrapper">
+                        <div class="case-body-box">
+                            <div class="case-step">
+                                <h4>Context / Client Need</h4>
+                                <p>Enterprise manufacturing clients required customized high-load multi-axis lineals and advanced mechanical robotics infrastructure blueprints on tight schedules.</p>
+                            </div>
+                            <div class="case-step">
+                                <h4>Strategic Action Taken</h4>
+                                <p>Standardized internal design workflows in SolidWorks/Fusion 360 and built custom pricing modules to accelerate direct engineering communications with Western vendors.</p>
+                            </div>
+                            <div class="case-step">
+                                <h4>Validated KPI Result</h4>
+                                <p style="color: #32d74b; font-weight: 600;">Reduced blueprint cycle delays by 35%, eliminated order mismatches, and finalized key enterprise contract sales for heavy robotic components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Design Engineer</h3>
+                            <div class="company-name">Minsk Watch Plant (Luch)</div>
+                        </div>
+                        <span class="job-date">Mar 2020 — Apr 2020</span>
+                    </div>
+                    <ul class="job-list">
+                        <li>Designed specialized industrial fixtures designated for manufacturing watch micro-components.</li>
+                        <li>Gained early structural experience navigating factory production lines concurrently with finalizing academic research.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div data-aos="fade-up">
+            <h2>Core Competencies</h2>
+            <div class="skills-dashboard">
+                <div class="chart-container">
+                    <canvas id="skillsRadarChart"></canvas>
+                </div>
+                <div class="skills-description">
+                    <h3>Strategic Architecture</h3>
+                    <p>A multi-disciplinary blend combining user discovery loops, commercial growth methodologies, and precise engineering practices.</p>
+                    
+                    <h4 style="margin-top: 25px; font-size: 15px; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Product & Growth Stack</h4>
+                    <ul class="skills-list-tags">
+                        <li>Product Analytics</li>
+                        <li>Competitor Analysis</li>
+                        <li>Customer Development (CustDev)</li>
+                        <li>A/B Testing</li>
+                        <li>Content Marketing Strategy</li>
+                        <li>B2B Enterprise Sales Cycles</li>
+                        <li>Strategic Roadmap Planning</li>
+                        <li>AI Automation Execution</li>
+                    </ul>
+
+                    <h4 style="margin-top: 20px; font-size: 15px; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Engineering & Technical Assets</h4>
+                    <ul class="skills-list-tags">
+                        <li>AutoCAD</li>
+                        <li>SolidWorks</li>
+                        <li>Fusion 360</li>
+                        <li>КОМПАС-3D</li>
+                        <li>1C Enterprise</li>
+                        <li>Microsoft Office Suite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="growth">
+        <div data-aos="fade-up">
+            <h2>Product Optimization Architecture</h2>
+            <div class="grid-2">
+                
+                <div class="os-card">
+                    <h3 style="text-align: center; margin-bottom: 25px;">Funnel Conversion Model</h3>
+                    <div class="funnel-container">
+                        <div class="funnel-layer fl-1"><span>Awareness (Content Channels)</span> <span>100%</span></div>
+                        <div class="funnel-layer fl-2"><span>Acquisition (Traffic Vectors)</span> <span>85%</span></div>
+                        <div class="funnel-layer fl-3"><span>Activation (Interactive Simulator)</span> <span>70%</span></div>
+                        <div class="funnel-layer fl-4"><span>Monetization & Merch Scaling</span> <span>Optimized</span></div>
+                    </div>
+                </div>
+
+                <div class="os-card">
+                    <h3 style="text-align: center; margin-bottom: 25px;">Strategic Product Roadmap</h3>
+                    <div class="roadmap-list">
+                        <div class="roadmap-node">
+                            <span class="node-status ns-shipped">Shipped</span>
+                            <div>
+                                <h4>AI Asset Automation</h4>
+                                <p>Integrated generative networks into automated course design pipelines.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node">
+                            <span class="node-status ns-now">Now</span>
+                            <div>
+                                <h4>Physical Stream v2</h4>
+                                <p>Iterating on physical asset pipelines and global shipping logic for brand products.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-node">
+                            <span class="node-status ns-next">Next</span>
+                            <div>
+                                <h4>B2B Enterprise Integration</h4>
+                                <p>Developing structured management layers for enterprise corporate accounts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="ai">
+        <div data-aos="fade-up">
+            <h2>AI Portfolio & Product Impact</h2>
+            <div class="ai-portfolio-grid">
+                
+                <div class="ai-card">
+                    <div>
+                        <span class="ai-badge">AI Integration & Automation</span>
+                        <h3>Generative Production Pipelines</h3>
+                        <p>Deployed artificial intelligence tools for full-cycle marketing asset and content generation: processing scripts, building video structures, editing, and generating high-converting graphic creatives.</p>
+                    </div>
+                    <div class="ai-card-metrics">
+                        <div class="metric-item">
+                            <span class="m-val">40%</span>
+                            <span class="m-lbl">Ops Speed Improvement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-card">
+                    <div>
+                        <span class="ai-badge">Product Scaling</span>
+                        <h3>B2B E-Commerce & Merch Launch</h3>
+                        <p>Constructed a brand monetization asset vertical from absolute zero. Designed, coordinated with factories, managed logistics, and validated quality for over 20 unique items.</p>
+                    </div>
+                    <div class="ai-card-metrics">
+                        <div class="metric-item">
+                            <span class="m-val">20+</span>
+                            <span class="m-lbl">Unique Scaled Products</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-anchor">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>Artur Khryshchanovich</h4>
+                <p>Product Manager balancing technical engineering precision with modern user growth frameworks.</p>
+                <p style="margin-top: 15px; font-size: 13px; opacity: 0.6;">Driving cross-functional impact since 2020.</p>
+            </div>
+            <div class="footer-box">
+                <h5>Contact Inquiries</h5>
+                <ul class="footer-links-list">
+                    <li><strong>Email:</strong> <br><a href="mailto:arthurvate@gmail.com">arthurvate@gmail.com</a></li>
+                    <li>
+                        <strong>Mobile & Messengers:</strong> <br><a href="tel:+375336201260">+375 (33) 6201260</a>
+                        <div class="messenger-row" style="margin-top: 10px;">
+                            <a href="https://t.me/arthurvate" target="_blank" class="messenger-btn tg-btn"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                            <a href="https://wa.me/375336201260" target="_blank" class="messenger-btn wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="viber://chat?number=%2B375336201260" class="messenger-btn vb-btn"><i class="fab fa-viber"></i> Viber</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h5>Background Meta</h5>
+                <ul class="footer-links-list">
+                    <li><strong>Education:</strong> <br>BNTU (Automation of Technological Processes and Productions, 2020)</li>
+                    <li><strong>Professional Training:</strong> <br>Crypto-school (Blockchain Technology Course, 2022)</li>
+                    <li><strong>Languages:</strong> <br>English (B2 Upper-Intermediate), Russian (Native)</li>
+                    <li><strong>Driving Credentials:</strong> <br>Category A and B Driving Licenses</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Artur Khryshchanovich. Engineered with premium design semantics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            duration: 900,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        // Toggle Expandable Case Studies Logic
+        function toggleCase(id, button) {
+            const element = document.getElementById(id);
+            element.classList.toggle('active');
+            if (element.classList.contains('active')) {
+                button.innerHTML = `<i class="fas fa-folder-minus"></i> Hide Project Metrics`;
+            } else {
+                button.innerHTML = `<i class="fas fa-folder-open"></i> View Metrics & Action Plan`;
+            }
+        }
+
+        // Setup Radar Chart configuration with accurate scaling metrics
+        const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Product Strategy', 'Continuous Discovery', 'AI Optimization', 'Mechanical Automation', 'B2B Technical Sales', 'Data Analytics'],
+                datasets: [{
+                    label: 'Core Value',
+                    data: [92, 88, 90, 95, 94, 85],
+                    fill: true,
+                    backgroundColor: 'rgba(41, 151, 255, 0.15)',
+                    borderColor: '#2997ff',
+                    pointBackgroundColor: '#2997ff',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#2997ff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        grid: { color: '#333336' },
+                        angleLines: { color: '#333336' },
+                        pointLabels: {
+                            color: '#f5f5f7',
+                            font: { size: 12, weight: '500', family: 'Inter' }
+                        },
+                        ticks: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
