@@ -12,8 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-:root{--bg:#080810;--bg2:#0f0f1a;--bg3:#16161f;--surface:#1c1c28;--surface2:#232332;--border:rgba(255,255,255,0.08);--text:#f0f0f5;--text2:#9090a8;--text3:#5c5c78;--accent:#5b5ef5;--accent2:#8b8ef8;--accent3:#c4c5ff;--gold:#e8c97e;--green:#34d399;--pink:#f472b6;--r:16px}
-[data-theme="light"]{--bg:#f8f8fc;--bg2:#f0f0f8;--bg3:#e8e8f2;--surface:#ffffff;--surface2:#f4f4fb;--border:rgba(0,0,0,0.08);--text:#0d0d1a;--text2:#4a4a6a;--text3:#8a8aaa;--accent:#4a4df0;--accent2:#6366f1;--accent3:#818cf8}
+:root{--bg:#080810;--bg2:#0f0f1a;--bg3:#16161f;--surface:#1c1c28;--surface2:#232332;--border:rgba(255,255,255,0.08);--text:#f0f0f5;--text2:#9090a8;--text3:#5c5c78;--accent:#2dd4bf;--accent2:#5eead4;--accent3:#99f6e4;--gold:#e8c97e;--green:#34d399;--pink:#f472b6;--r:16px}
+[data-theme="light"]{--bg:#f8f8fc;--bg2:#f0f0f8;--bg3:#e8e8f2;--surface:#ffffff;--surface2:#f4f4fb;--border:rgba(0,0,0,0.08);--text:#0d0d1a;--text2:#4a4a6a;--text3:#8a8aaa;--accent:#0d9488;--accent2:#14b8a6;--accent3:#2dd4bf}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;width:100%}
@@ -38,10 +38,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .hamburger span{display:block;width:22px;height:2px;background:var(--text2);border-radius:2px;transition:all 0.3s}
 
 #hero{min-height:100vh;display:flex;align-items:center;padding:64px clamp(1rem,5vw,6rem) 0;position:relative;overflow:hidden;width:100%}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(91,94,245,0.18) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(244,114,182,0.08) 0%,transparent 60%),var(--bg);will-change:transform}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(45,212,191,0.18) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(244,114,182,0.08) 0%,transparent 60%),var(--bg);will-change:transform}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);opacity:0.4;will-change:transform}
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;width:100%;max-width:1200px;margin:0 auto;padding-top:5rem;padding-bottom:5rem}
-.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(91,94,245,0.12);border:1px solid rgba(91,94,245,0.3);color:var(--accent3);padding:0.375rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
+.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(45,212,191,0.12);border:1px solid rgba(45,212,191,0.3);color:var(--accent3);padding:0.375rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.5)}}
 h1.hero-name{font-size:clamp(2.8rem,5vw,4.5rem);color:var(--text);letter-spacing:-0.03em;line-height:1.05;margin-bottom:0.5rem;animation:fadeUp 0.7s 0.1s ease both}
@@ -54,7 +54,7 @@ h1.hero-name span.name-accent{color:var(--accent2);font-style:normal}
 .hero-stat .label{font-size:0.75rem;color:var(--text3);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.25rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.7s 0.5s ease both}
 .btn-primary{padding:0.875rem 2rem;border-radius:50px;background:var(--accent);color:#fff;font-size:0.9rem;font-weight:600;transition:all 0.25s;display:inline-flex;align-items:center;gap:0.5rem}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(91,94,245,0.4)}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(45,212,191,0.4)}
 .btn-secondary{padding:0.875rem 2rem;border-radius:50px;background:var(--surface2);color:var(--text);font-size:0.9rem;font-weight:500;border:1px solid var(--border);transition:all 0.25s;display:inline-flex;align-items:center;gap:0.5rem}
 .btn-secondary:hover{background:var(--surface);transform:translateY(-2px)}
 .hero-photo-col{display:flex;justify-content:center;align-items:center;animation:fadeUp 0.8s 0.2s ease both}
@@ -82,20 +82,18 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 #experience{background:var(--bg2)}
 .exp-grid{display:grid;gap:2rem}
 .exp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2.5rem;position:relative;overflow:hidden;transition:all 0.3s}
-.exp-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity 0.3s}
-.exp-card:hover{border-color:rgba(91,94,245,0.3);transform:translateY(-2px)}
-.exp-card:hover::before{opacity:1}
+.exp-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-2px)}
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.75rem}
 .exp-company{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:0.25rem}
 .exp-title{font-size:1.5rem;color:var(--text);font-family:"DM Serif Display",serif}
 .exp-period{background:var(--surface2);border:1px solid var(--border);padding:0.375rem 1rem;border-radius:50px;font-size:0.8rem;color:var(--text2);white-space:nowrap}
 .exp-items{display:grid;gap:1rem;margin-bottom:2rem}
 .exp-item{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;padding:1.25rem;background:var(--surface2);border-radius:12px;border:1px solid var(--border)}
-.exp-icon{width:36px;height:36px;border-radius:10px;background:rgba(91,94,245,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.exp-icon{width:36px;height:36px;border-radius:10px;background:rgba(45,212,191,0.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
 .exp-item h4{font-size:0.8rem;font-weight:600;color:var(--accent3);margin-bottom:0.375rem;letter-spacing:0.04em;text-transform:uppercase}
 .exp-item p{font-size:0.9rem;color:var(--text2);line-height:1.6}
 .kpi-row{display:flex;gap:1rem;flex-wrap:wrap}
-.kpi{background:rgba(91,94,245,0.08);border:1px solid rgba(91,94,245,0.2);border-radius:10px;padding:0.75rem 1.25rem;flex:1;min-width:120px}
+.kpi{background:rgba(45,212,191,0.08);border:1px solid rgba(45,212,191,0.2);border-radius:10px;padding:0.75rem 1.25rem;flex:1;min-width:120px}
 .kpi .kpi-val{font-family:"DM Serif Display",serif;font-size:1.35rem;color:var(--accent2);line-height:1.2;font-weight:400}
 .kpi .kpi-lbl{font-size:0.7rem;color:var(--text3);margin-top:0.1rem;letter-spacing:0.04em}
 .kpi.green{background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.2)}
@@ -117,7 +115,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .skills-cat h3{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem}
 .skill-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
 .skill-tag{display:inline-flex;align-items:center;gap:0.375rem;background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:0.4rem 0.875rem;border-radius:50px;font-size:0.8rem;transition:all 0.2s}
-.skill-tag:hover{border-color:rgba(91,94,245,0.3);color:var(--text);background:var(--surface2)}
+.skill-tag:hover{border-color:rgba(45,212,191,0.3);color:var(--text);background:var(--surface2)}
 .skill-tag .level{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .l5{background:var(--green)}.l4{background:var(--accent2)}.l3{background:var(--gold)}
 
@@ -133,20 +131,20 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .rm-item:nth-child(even) .rm-center{order:2}
 .rm-item:nth-child(even) .rm-right{order:1;text-align:right;padding-right:1.5rem;padding-left:0}
 .rm-center{display:flex;align-items:flex-start;justify-content:center;padding-top:0.25rem}
-.rm-dot{width:48px;height:48px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 0 20px rgba(91,94,245,0.3);flex-shrink:0}
+.rm-dot{width:48px;height:48px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 0 20px rgba(45,212,191,0.3);flex-shrink:0}
 .rm-period{font-size:0.7rem;color:var(--accent2);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.25rem}
 .rm-title{font-family:"DM Serif Display",serif;font-size:1.1rem;color:var(--text);margin-bottom:0.5rem}
 .rm-desc{font-size:0.85rem;color:var(--text2);line-height:1.6}
-.rm-tag{display:inline-block;font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:50px;background:rgba(91,94,245,0.1);color:var(--accent3);border:1px solid rgba(91,94,245,0.2);margin-top:0.5rem;margin-right:0.25rem}
+.rm-tag{display:inline-block;font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:50px;background:rgba(45,212,191,0.1);color:var(--accent3);border:1px solid rgba(45,212,191,0.2);margin-top:0.5rem;margin-right:0.25rem}
 
 #funnel{background:var(--bg)}
 .funnel-wrap{max-width:680px;margin:0 auto}
 .funnel-stage{margin-bottom:0.5rem;display:flex;flex-direction:column;align-items:flex-start}
 .funnel-bar{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0.75rem;padding:1rem 1.5rem;border-radius:12px;border:1px solid var(--border);transition:all 0.3s;cursor:default;position:relative;overflow:hidden;width:100%}
 .funnel-bar:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,0,0,0.15)}
-.fs-1{width:100%;background:rgba(91,94,245,0.15);border-color:rgba(91,94,245,0.35)}
-.fs-2{width:90%;background:rgba(139,142,248,0.11);border-color:rgba(139,142,248,0.25)}
-.fs-3{width:80%;background:rgba(196,197,255,0.09);border-color:rgba(196,197,255,0.2)}
+.fs-1{width:100%;background:rgba(45,212,191,0.15);border-color:rgba(45,212,191,0.35)}
+.fs-2{width:90%;background:rgba(94,234,212,0.11);border-color:rgba(94,234,212,0.25)}
+.fs-3{width:80%;background:rgba(153,246,228,0.09);border-color:rgba(153,246,228,0.2)}
 .fs-4{width:70%;background:rgba(52,211,153,0.09);border-color:rgba(52,211,153,0.2)}
 .fs-5{width:60%;background:rgba(232,201,126,0.09);border-color:rgba(232,201,126,0.2)}
 .fs-6{width:50%;background:rgba(244,114,182,0.09);border-color:rgba(244,114,182,0.2)}
@@ -157,9 +155,9 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 #ai-usage{background:var(--bg2)}
 .ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
 .ai-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;position:relative;overflow:hidden;transition:all 0.3s}
-.ai-card:hover{border-color:rgba(91,94,245,0.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.2)}
+.ai-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.2)}
 .ai-card-glow{position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:var(--accent);opacity:0.06;filter:blur(20px)}
-.ai-card-icon{width:48px;height:48px;border-radius:14px;background:rgba(91,94,245,0.1);border:1px solid rgba(91,94,245,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
+.ai-card-icon{width:48px;height:48px;border-radius:14px;background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
 .ai-card h3{font-size:1rem;color:var(--text);margin-bottom:0.5rem;font-family:"DM Serif Display",serif}
 .ai-card p{font-size:0.875rem;color:var(--text2);line-height:1.6}
 .ai-tools{margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem}
@@ -168,7 +166,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 #cases{background:var(--bg)}
 .cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
 .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:all 0.3s}
-.case-card:hover{border-color:rgba(91,94,245,0.3);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.2)}
+.case-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.2)}
 .case-tag{display:inline-flex;align-items:center;gap:0.375rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent3)}
 .case-card h3{font-family:"DM Serif Display",serif;font-size:1.35rem;color:var(--text);line-height:1.2}
 .case-challenge{font-size:0.875rem;color:var(--text2);line-height:1.65}
@@ -181,7 +179,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .timeline{position:relative;padding-left:2rem}
 .timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),transparent)}
 .tl-item{position:relative;padding:0 0 3rem 2.5rem}
-.tl-item::before{content:"";position:absolute;left:-5px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(91,94,245,0.5)}
+.tl-item::before{content:"";position:absolute;left:-5px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(45,212,191,0.5)}
 .tl-date{font-size:0.75rem;color:var(--accent2);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.375rem}
 .tl-title{font-family:"DM Serif Display",serif;font-size:1.25rem;color:var(--text);margin-bottom:0.375rem}
 .tl-org{font-size:0.8rem;color:var(--text3);margin-bottom:0.75rem}
@@ -190,7 +188,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 #product-os{background:var(--bg)}
 .os-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
 .os-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;transition:all 0.3s;display:flex;flex-direction:column;gap:0.75rem}
-.os-card:hover{border-color:rgba(91,94,245,0.25);transform:translateY(-2px)}
+.os-card:hover{border-color:rgba(45,212,191,0.25);transform:translateY(-2px)}
 .os-num{font-family:"DM Serif Display",serif;font-size:2.5rem;color:var(--text3);line-height:1;user-select:none}
 .os-card h3{font-size:1rem;color:var(--text);font-weight:600}
 .os-card p{font-size:0.875rem;color:var(--text2);line-height:1.6}
@@ -198,17 +196,17 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 #education{background:var(--bg2)}
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
 .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2rem;transition:all 0.3s}
-.edu-card:hover{border-color:rgba(91,94,245,0.2);transform:translateY(-2px)}
+.edu-card:hover{border-color:rgba(45,212,191,0.2);transform:translateY(-2px)}
 .edu-year{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;color:var(--accent2);text-transform:uppercase;margin-bottom:0.5rem}
 .edu-card h3{font-family:"DM Serif Display",serif;font-size:1.2rem;color:var(--text);margin-bottom:0.25rem}
 .edu-card p{font-size:0.875rem;color:var(--text2)}
 
-#contact{background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(91,94,245,0.15) 0%,transparent 70%),var(--bg);text-align:center;padding:clamp(5rem,10vw,10rem) clamp(1.5rem,6vw,6rem)}
+#contact{background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(45,212,191,0.15) 0%,transparent 70%),var(--bg);text-align:center;padding:clamp(5rem,10vw,10rem) clamp(1.5rem,6vw,6rem)}
 #contact h2{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1rem}
 #contact p{font-size:1.1rem;color:var(--text2);max-width:500px;margin:0 auto 2.5rem}
 .contact-links{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:3rem}
 .contact-link{display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 1.75rem;border-radius:50px;background:var(--surface);border:1px solid var(--border);color:var(--text2);font-size:0.9rem;transition:all 0.25s}
-.contact-link:hover{border-color:rgba(91,94,245,0.4);color:var(--text);transform:translateY(-2px)}
+.contact-link:hover{border-color:rgba(45,212,191,0.4);color:var(--text);transform:translateY(-2px)}
 .contact-link .icon{font-size:1.1rem}
 footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,6vw,6rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 footer p{font-size:0.8rem;color:var(--text3)}
@@ -344,13 +342,13 @@ footer p{font-size:0.8rem;color:var(--text3)}
   background:var(--accent);color:#fff;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;border:none;font-size:1.2rem;
-  box-shadow:0 4px 20px rgba(91,94,245,0.4);
+  box-shadow:0 4px 20px rgba(45,212,191,0.4);
   opacity:0;transform:translateY(10px);
   transition:all 0.3s cubic-bezier(0.16,1,0.3,1);
   pointer-events:none;
 }
 .back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:all}
-.back-to-top:hover{background:var(--accent2);transform:translateY(-3px);box-shadow:0 8px 28px rgba(91,94,245,0.5)}
+.back-to-top:hover{background:var(--accent2);transform:translateY(-3px);box-shadow:0 8px 28px rgba(45,212,191,0.5)}
 </style>
 </head>
 <body>
@@ -364,7 +362,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <a href="#cases">Case Studies</a>
     <a href="#product-os">Approach</a>
     <a href="#contact">Contact</a>
-    <a href="portfolio.html" style="color:var(--accent3);font-weight:600;border:1px solid rgba(196,197,255,0.25);padding:0.3rem 0.875rem;border-radius:50px;font-size:0.8rem;transition:all 0.2s" onmouseover="this.style.background='rgba(91,94,245,0.12)'" onmouseout="this.style.background='transparent'">Portfolio ↗</a>
+    <a href="portfolio.html" style="color:var(--accent3);font-weight:600;border:1px solid rgba(153,246,228,0.25);padding:0.3rem 0.875rem;border-radius:50px;font-size:0.8rem;transition:all 0.2s" onmouseover="this.style.background='rgba(45,212,191,0.12)'" onmouseout="this.style.background='transparent'">Portfolio ↗</a>
   </div>
   <div class="nav-actions">
     <button class="theme-btn" id="themeToggle" title="Toggle theme">☀️</button>
@@ -401,7 +399,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div class="hero-ctas">
         <a href="#experience" class="btn-primary">↓ View Portfolio</a>
         <a href="#contact" class="btn-secondary">✉ Hire Me</a>
-        <a href="portfolio.html" class="btn-secondary" style="border-color:rgba(196,197,255,0.3);color:var(--accent3)">▶ Portfolio</a>
+        <a href="portfolio.html" class="btn-secondary" style="border-color:rgba(153,246,228,0.3);color:var(--accent3)">▶ Portfolio</a>
       </div>
     </div>
     <div class="hero-photo-col">
@@ -433,7 +431,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div class="exp-card reveal">
         <div class="exp-header">
           <div>
-            <div class="exp-company">Online School · Simulator for Training · iGambling/EdTech &nbsp;·&nbsp; <span style="color:var(--text3);font-size:0.7em">in cooperation with</span> <a href="https://www.winamax.es/en/" target="_blank" style="color:var(--accent3);text-decoration:none;border-bottom:1px solid rgba(196,197,255,0.3)">Winamax</a></div>
+            <div class="exp-company">Online School · Simulator for Training · iGambling/EdTech &nbsp;·&nbsp; <span style="color:var(--text3);font-size:0.7em">in cooperation with</span> <a href="https://www.winamax.es/en/" target="_blank" style="color:var(--accent3);text-decoration:none;border-bottom:1px solid rgba(153,246,228,0.3)">Winamax</a></div>
             <div class="exp-title">Product Manager</div>
           </div>
           <div class="exp-period">Nov 2023 — May 2026 · 2y 7m</div>
@@ -485,7 +483,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div class="exp-card reveal reveal-d1">
         <div class="exp-header">
           <div>
-            <div class="exp-company"><a href="https://kugel.by/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(139,142,248,0.3)">Kugel</a> · <a href="https://www.hiwin.tw/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(139,142,248,0.3)">HIWIN</a> Official Distributor · Industrial B2B</div>
+            <div class="exp-company"><a href="https://kugel.by/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(94,234,212,0.3)">Kugel</a> · <a href="https://www.hiwin.tw/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(94,234,212,0.3)">HIWIN</a> Official Distributor · Industrial B2B</div>
             <div class="exp-title">Automation Engineer · Technical Sales Manager</div>
           </div>
           <div class="exp-period">Apr 2020 — Nov 2023 · 3y 8m</div>
@@ -523,7 +521,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div class="exp-card reveal reveal-d2">
         <div class="exp-header">
           <div>
-            <div class="exp-company">Minsk Watch Factory · <a href="https://luch.by/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(139,142,248,0.3)">Luch</a> · Manufacturing</div>
+            <div class="exp-company">Minsk Watch Factory · <a href="https://luch.by/" target="_blank" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(94,234,212,0.3)">Luch</a> · Manufacturing</div>
             <div class="exp-title">Design Engineer</div>
           </div>
           <div class="exp-period">Mar 2020 — Apr 2020 · 2m</div>
@@ -689,9 +687,9 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <h2 class="section-title">Growth Funnel in Action</h2>
     <p class="section-sub">How I approached user acquisition, activation, and monetization at the EdTech platform — end to end.</p>
     <div class="funnel-wrap reveal">
-      <div class="funnel-stage"><div class="funnel-bar fs-1"><div class="funnel-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5b5ef5;margin-right:0.5rem;flex-shrink:0"></span>Awareness</div><div class="funnel-metric">YouTube · TikTok · Telegram · Instagram</div></div></div>
+      <div class="funnel-stage"><div class="funnel-bar fs-1"><div class="funnel-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#2dd4bf;margin-right:0.5rem;flex-shrink:0"></span>Awareness</div><div class="funnel-metric">YouTube · TikTok · Telegram · Instagram</div></div></div>
       <div class="funnel-arrow"></div>
-      <div class="funnel-stage"><div class="funnel-bar fs-2"><div class="funnel-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8b8ef8;margin-right:0.5rem;flex-shrink:0"></span>Acquisition</div><div class="funnel-metric">Organic content + targeted paid ads</div></div></div>
+      <div class="funnel-stage"><div class="funnel-bar fs-2"><div class="funnel-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#5eead4;margin-right:0.5rem;flex-shrink:0"></span>Acquisition</div><div class="funnel-metric">Organic content + targeted paid ads</div></div></div>
       <div class="funnel-arrow"></div>
       <div class="funnel-stage"><div class="funnel-bar fs-3"><div class="funnel-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#34d399;margin-right:0.5rem;flex-shrink:0"></span>Activation</div><div class="funnel-metric">A/B-tested onboarding · Quick wins</div></div></div>
       <div class="funnel-arrow"></div>
@@ -710,12 +708,12 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <h2 class="section-title">How I Use AI at Work</h2>
     <p class="section-sub">AI is my daily force multiplier — not a buzzword. Here's exactly where I've integrated it into product and marketing workflows.</p>
     <div class="ai-grid">
-      <div class="ai-card reveal"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="var(--accent2)"/><circle cx="17.5" cy="10.5" r=".5" fill="var(--accent2)"/><circle cx="8.5" cy="7.5" r=".5" fill="var(--accent2)"/><circle cx="6.5" cy="12.5" r=".5" fill="var(--accent2)"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><h3>Creative Content at Scale</h3><p>Used AI image and video generation to produce on-brand marketing assets at 10× the speed of traditional production — replacing generic stock with precise visual outputs without inflating the creative team.</p><div class="ai-tools"><a href="https://www.midjourney.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Midjourney</a><a href="https://openai.com/dall-e-3" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 DALL·E</a><a href="https://runwayml.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Runway ML</a><a href="https://www.capcut.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 CapCut AI</a></div></div>
-      <div class="ai-card reveal reveal-d1"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><h3>Copywriting & Content Scaling</h3><p>Automated first-draft creation for scripts, email sequences, product descriptions, and social content. Maintained brand voice through structured prompt templates and human editing passes — output quality went up, time went down.</p><div class="ai-tools"><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://www.notion.com/product/ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Notion AI</a></div></div>
-      <div class="ai-card reveal reveal-d2"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5m4 0h10m-6 7v-7m0 7H9m4 0h2"/><circle cx="15" cy="11" r="3"/></svg></div><h3>User Research Synthesis</h3><p>Fed interview transcripts, support tickets, and NPS comments into AI for theme clustering and pattern extraction. Reduced research synthesis from days to hours while improving coverage and reducing analyst bias.</p><div class="ai-tools"><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><span class="ai-tool-tag">Custom Prompts</span></div></div>
-      <div class="ai-card reveal reveal-d3"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>Competitive & Market Analysis</h3><p>Accelerated competitor research, market report summarization, and hypothesis generation for roadmap prioritization. Turned days of manual research into hours of structured, actionable insight.</p><div class="ai-tools"><a href="https://www.perplexity.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Perplexity</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a></div></div>
-      <div class="ai-card reveal"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></div><h3>PRD & Spec Drafting</h3><p>Used LLMs to draft product requirements documents, user stories, and acceptance criteria from rough notes and interview highlights. Faster handoffs, more consistent spec quality, less PM bottleneck.</p><div class="ai-tools"><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://www.notion.com/product/ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Notion AI</a></div></div>
-      <div class="ai-card reveal reveal-d1"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div><h3>Workflow Automation</h3><p>Built AI-powered operational workflows to eliminate repetitive tasks — from automated report generation to CRM enrichment — freeing the team for high-judgment work. Results-first process design with AI as the backbone.</p><div class="ai-tools"><a href="https://zapier.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Zapier AI</a><a href="https://make.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 Make.com</a><a href="https://platform.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(91,94,245,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT API</a></div></div>
+      <div class="ai-card reveal"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="var(--accent2)"/><circle cx="17.5" cy="10.5" r=".5" fill="var(--accent2)"/><circle cx="8.5" cy="7.5" r=".5" fill="var(--accent2)"/><circle cx="6.5" cy="12.5" r=".5" fill="var(--accent2)"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div><h3>Creative Content at Scale</h3><p>Used AI image and video generation to produce on-brand marketing assets at 10× the speed of traditional production — replacing generic stock with precise visual outputs without inflating the creative team.</p><div class="ai-tools"><a href="https://www.midjourney.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Midjourney</a><a href="https://openai.com/dall-e-3" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 DALL·E</a><a href="https://runwayml.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Runway ML</a><a href="https://www.capcut.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 CapCut AI</a></div></div>
+      <div class="ai-card reveal reveal-d1"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><h3>Copywriting & Content Scaling</h3><p>Automated first-draft creation for scripts, email sequences, product descriptions, and social content. Maintained brand voice through structured prompt templates and human editing passes — output quality went up, time went down.</p><div class="ai-tools"><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://www.notion.com/product/ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Notion AI</a></div></div>
+      <div class="ai-card reveal reveal-d2"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5m4 0h10m-6 7v-7m0 7H9m4 0h2"/><circle cx="15" cy="11" r="3"/></svg></div><h3>User Research Synthesis</h3><p>Fed interview transcripts, support tickets, and NPS comments into AI for theme clustering and pattern extraction. Reduced research synthesis from days to hours while improving coverage and reducing analyst bias.</p><div class="ai-tools"><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><span class="ai-tool-tag">Custom Prompts</span></div></div>
+      <div class="ai-card reveal reveal-d3"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>Competitive & Market Analysis</h3><p>Accelerated competitor research, market report summarization, and hypothesis generation for roadmap prioritization. Turned days of manual research into hours of structured, actionable insight.</p><div class="ai-tools"><a href="https://www.perplexity.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Perplexity</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a></div></div>
+      <div class="ai-card reveal"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></div><h3>PRD & Spec Drafting</h3><p>Used LLMs to draft product requirements documents, user stories, and acceptance criteria from rough notes and interview highlights. Faster handoffs, more consistent spec quality, less PM bottleneck.</p><div class="ai-tools"><a href="https://claude.ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Claude</a><a href="https://chat.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT</a><a href="https://www.notion.com/product/ai" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Notion AI</a></div></div>
+      <div class="ai-card reveal reveal-d1"><div class="ai-card-glow"></div><div class="ai-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div><h3>Workflow Automation</h3><p>Built AI-powered operational workflows to eliminate repetitive tasks — from automated report generation to CRM enrichment — freeing the team for high-judgment work. Results-first process design with AI as the backbone.</p><div class="ai-tools"><a href="https://zapier.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Zapier AI</a><a href="https://make.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 Make.com</a><a href="https://platform.openai.com" target="_blank" class="ai-tool-tag" style="text-decoration:none;cursor:pointer" onmouseover="this.style.borderColor='rgba(45,212,191,0.4)'" onmouseout="this.style.borderColor=''">🔗 ChatGPT API</a></div></div>
     </div>
   </div>
 </section>
@@ -856,9 +854,9 @@ footer p{font-size:0.8rem;color:var(--text3)}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.15 3.44 2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
         +375 33 620 12 60
       </a>
-      <a href="mailto:arthurvate@gmail.com" class="contact-link">
+      <a href="mailto:arthurvate@gmail.com?subject=Hello" class="contact-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        arthurvate@gmail.com
+        Artur.Khryshchanovich@gmail.com
       </a>
       <a href="https://www.linkedin.com/in/artur-vate-53b09a40b/" class="contact-link" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -926,10 +924,10 @@ new Chart(radarCtx, {
     labels: ['Strategy','Research','Analytics','Growth','Leadership','AI/Tech','Marketing','Execution'],
     datasets: [{
       data: [95,90,85,88,85,90,85,92],
-      backgroundColor: 'rgba(91,94,245,0.15)',
-      borderColor: 'rgba(91,94,245,0.8)',
+      backgroundColor: 'rgba(45,212,191,0.15)',
+      borderColor: 'rgba(45,212,191,0.8)',
       borderWidth: 2,
-      pointBackgroundColor: 'rgba(139,142,248,1)',
+      pointBackgroundColor: 'rgba(94,234,212,1)',
       pointBorderColor: '#fff',
       pointBorderWidth: 2,
       pointRadius: 5,
