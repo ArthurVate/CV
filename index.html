@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <title>Artur Khryshchanovich · Product Manager</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root{--bg:#080810;--bg2:#0f0f1a;--bg3:#16161f;--surface:#1c1c28;--surface2:#232332;--border:rgba(255,255,255,0.08);--text:#f0f0f5;--text2:#9090a8;--text3:#5c5c78;--accent:#2dd4bf;--accent2:#5eead4;--accent3:#99f6e4;--gold:#e8c97e;--green:#34d399;--pink:#f472b6;--r:16px}
@@ -17,14 +17,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;width:100%}
-h1,h2,h3,h4{font-family:"DM Serif Display",serif;font-weight:400;line-height:1.15}
+h1,h2,h3,h4{font-family:"Inter",sans-serif;font-weight:400;line-height:1.15}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button{cursor:pointer;border:none;background:none;font:inherit}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,3rem);height:64px;background:rgba(8,8,16,0.75);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--border);transition:background 0.3s}
 [data-theme="light"] nav{background:rgba(248,248,252,0.85)}
-.nav-logo{font-family:"DM Serif Display",serif;font-size:1.15rem;color:var(--text)}
+.nav-logo{font-family:"Inter",sans-serif;font-size:1.15rem;color:var(--text)}
 .nav-logo span{color:var(--accent2)}
 .nav-links{display:flex;align-items:center;gap:2rem}
 .nav-links a{font-size:0.875rem;font-weight:500;color:var(--text2);transition:color 0.2s}
@@ -44,12 +44,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(45,212,191,0.12);border:1px solid rgba(45,212,191,0.3);color:var(--accent3);padding:0.375rem 1rem;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.5)}}
-h1.hero-name{font-size:clamp(2.8rem,5vw,4.5rem);color:var(--text);letter-spacing:-0.03em;line-height:1.05;margin-bottom:0.5rem;animation:fadeUp 0.7s 0.1s ease both}
+h1.hero-name{font-size:clamp(2.8rem,5vw,4.5rem);color:var(--text);letter-spacing:-0.01em;line-height:1.05;margin-bottom:0.5rem;font-weight:600;animation:fadeUp 0.7s 0.1s ease both}
 h1.hero-name span.name-accent{color:var(--accent2);font-style:normal}
 .hero-role{font-size:clamp(1rem,1.8vw,1.25rem);color:var(--text2);font-weight:300;margin-bottom:2rem;animation:fadeUp 0.7s 0.2s ease both;min-height:2em}
 .hero-desc{font-size:1rem;color:var(--text2);line-height:1.75;max-width:480px;margin-bottom:2.5rem;animation:fadeUp 0.7s 0.3s ease both}
 .hero-stats{display:flex;gap:2.5rem;margin-bottom:2.5rem;animation:fadeUp 0.7s 0.4s ease both}
-.hero-stat .num{font-family:"DM Serif Display",serif;font-size:2rem;color:var(--text);line-height:1}
+.hero-stat .num{font-family:"Inter",sans-serif;font-size:2rem;color:var(--text);line-height:1}
 .hero-stat .num span{color:var(--accent2)}
 .hero-stat .label{font-size:0.75rem;color:var(--text3);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.25rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.7s 0.5s ease both}
@@ -64,7 +64,7 @@ h1.hero-name span.name-accent{color:var(--accent2);font-style:normal}
 .hero-photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:26px;border:3px solid var(--bg)}
 .hero-badge{position:absolute;bottom:-16px;left:-20px;z-index:2;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1rem 1.25rem;backdrop-filter:blur(10px);animation:float 4s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.hero-badge .b-num{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--accent2)}
+.hero-badge .b-num{font-family:"Inter",sans-serif;font-size:1.5rem;color:var(--accent2)}
 .hero-badge .b-label{font-size:0.7rem;color:var(--text3);white-space:nowrap}
 .badge-icon{font-size:1.25rem}
 .badge-text .t1{font-size:0.75rem;font-weight:600;color:var(--text)}
@@ -75,7 +75,7 @@ section{padding:clamp(3rem,8vw,8rem) clamp(1rem,5vw,6rem)}
 .container{max-width:1200px;margin:0 auto}
 .section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
 .section-label::before{content:"";display:inline-block;width:24px;height:2px;background:var(--accent2)}
-h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spacing:-0.02em;margin-bottom:1rem}
+h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spacing:-0.01em;margin-bottom:1rem;font-weight:600}
 .section-sub{font-size:1rem;color:var(--text2);max-width:600px;line-height:1.7;margin-bottom:3rem}
 
 #experience{background:var(--bg2)}
@@ -84,7 +84,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .exp-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-2px)}
 .exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.75rem}
 .exp-company{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:0.25rem}
-.exp-title{font-size:1.5rem;color:var(--text);font-family:"DM Serif Display",serif}
+.exp-title{font-size:1.5rem;color:var(--text);font-family:"Inter",sans-serif}
 .exp-period{background:var(--surface2);border:1px solid var(--border);padding:0.375rem 1rem;border-radius:50px;font-size:0.8rem;color:var(--text2);white-space:nowrap}
 .exp-items{display:grid;gap:1rem;margin-bottom:2rem}
 .exp-item{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;padding:1.25rem;background:var(--surface2);border-radius:12px;border:1px solid var(--border)}
@@ -93,7 +93,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .exp-item p{font-size:0.9rem;color:var(--text2);line-height:1.6}
 .kpi-row{display:flex;gap:1rem;flex-wrap:wrap}
 .kpi{background:rgba(45,212,191,0.08);border:1px solid rgba(45,212,191,0.2);border-radius:10px;padding:0.75rem 1.25rem;flex:1;min-width:120px}
-.kpi .kpi-val{font-family:"DM Serif Display",serif;font-size:1.35rem;color:var(--accent2);line-height:1.2;font-weight:400}
+.kpi .kpi-val{font-family:"Inter",sans-serif;font-size:1.35rem;color:var(--accent2);line-height:1.2;font-weight:400}
 .kpi .kpi-lbl{font-size:0.7rem;color:var(--text3);margin-top:0.1rem;letter-spacing:0.04em}
 .kpi.green{background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.2)}
 .kpi.green .kpi-val{color:var(--green)}
@@ -132,7 +132,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .rm-center{display:flex;align-items:flex-start;justify-content:center;padding-top:0.25rem}
 .rm-dot{width:48px;height:48px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 0 20px rgba(45,212,191,0.3);flex-shrink:0}
 .rm-period{font-size:0.7rem;color:var(--accent2);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.25rem}
-.rm-title{font-family:"DM Serif Display",serif;font-size:1.1rem;color:var(--text);margin-bottom:0.5rem}
+.rm-title{font-family:"Inter",sans-serif;font-size:1.1rem;color:var(--text);margin-bottom:0.5rem}
 .rm-desc{font-size:0.85rem;color:var(--text2);line-height:1.6}
 .rm-tag{display:inline-block;font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:50px;background:rgba(45,212,191,0.1);color:var(--accent3);border:1px solid rgba(45,212,191,0.2);margin-top:0.5rem;margin-right:0.25rem}
 
@@ -157,7 +157,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .ai-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.2)}
 .ai-card-glow{position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:var(--accent);opacity:0.06;filter:blur(20px)}
 .ai-card-icon{width:48px;height:48px;border-radius:14px;background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
-.ai-card h3{font-size:1rem;color:var(--text);margin-bottom:0.5rem;font-family:"DM Serif Display",serif}
+.ai-card h3{font-size:1rem;color:var(--text);margin-bottom:0.5rem;font-family:"Inter",sans-serif}
 .ai-card p{font-size:0.875rem;color:var(--text2);line-height:1.6}
 .ai-tools{margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem}
 .ai-tool-tag{font-size:0.7rem;font-weight:500;padding:0.25rem 0.625rem;border-radius:50px;background:var(--surface2);border:1px solid var(--border);color:var(--text3)}
@@ -167,11 +167,11 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:all 0.3s}
 .case-card:hover{border-color:rgba(45,212,191,0.3);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.2)}
 .case-tag{display:inline-flex;align-items:center;gap:0.375rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent3)}
-.case-card h3{font-family:"DM Serif Display",serif;font-size:1.35rem;color:var(--text);line-height:1.2}
+.case-card h3{font-family:"Inter",sans-serif;font-size:1.35rem;color:var(--text);line-height:1.2}
 .case-challenge{font-size:0.875rem;color:var(--text2);line-height:1.65}
 .case-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem}
 .case-metric{background:var(--surface2);border-radius:10px;padding:0.75rem;text-align:center;border:1px solid var(--border)}
-.case-metric .m-val{font-family:"DM Serif Display",serif;font-size:1.35rem;color:var(--accent2);display:block;font-weight:400}
+.case-metric .m-val{font-family:"Inter",sans-serif;font-size:1.35rem;color:var(--accent2);display:block;font-weight:400}
 .case-metric .m-lbl{font-size:0.65rem;color:var(--text3);margin-top:0.1rem;letter-spacing:0.03em}
 
 #leadership{background:var(--bg2)}
@@ -180,7 +180,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .tl-item{position:relative;padding:0 0 3rem 2.5rem}
 .tl-item::before{content:"";position:absolute;left:-5px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(45,212,191,0.5)}
 .tl-date{font-size:0.75rem;color:var(--accent2);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.375rem}
-.tl-title{font-family:"DM Serif Display",serif;font-size:1.25rem;color:var(--text);margin-bottom:0.375rem}
+.tl-title{font-family:"Inter",sans-serif;font-size:1.25rem;color:var(--text);margin-bottom:0.375rem}
 .tl-org{font-size:0.8rem;color:var(--text3);margin-bottom:0.75rem}
 .tl-desc{font-size:0.9rem;color:var(--text2);line-height:1.65}
 
@@ -188,7 +188,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .os-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
 .os-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;transition:all 0.3s;display:flex;flex-direction:column;gap:0.75rem}
 .os-card:hover{border-color:rgba(45,212,191,0.25);transform:translateY(-2px)}
-.os-num{font-family:"DM Serif Display",serif;font-size:2.5rem;color:var(--text3);line-height:1;user-select:none}
+.os-num{font-family:"Inter",sans-serif;font-size:2.5rem;color:var(--text3);line-height:1;user-select:none}
 .os-card h3{font-size:1rem;color:var(--text);font-weight:600}
 .os-card p{font-size:0.875rem;color:var(--text2);line-height:1.6}
 
@@ -197,7 +197,7 @@ h2.section-title{font-size:clamp(2rem,3.5vw,3rem);color:var(--text);letter-spaci
 .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2rem;transition:all 0.3s}
 .edu-card:hover{border-color:rgba(45,212,191,0.2);transform:translateY(-2px)}
 .edu-year{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;color:var(--accent2);text-transform:uppercase;margin-bottom:0.5rem}
-.edu-card h3{font-family:"DM Serif Display",serif;font-size:1.2rem;color:var(--text);margin-bottom:0.25rem}
+.edu-card h3{font-family:"Inter",sans-serif;font-size:1.2rem;color:var(--text);margin-bottom:0.25rem}
 .edu-card p{font-size:0.875rem;color:var(--text2)}
 
 #contact{background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(45,212,191,0.15) 0%,transparent 70%),var(--bg);text-align:center;padding:clamp(5rem,10vw,10rem) clamp(1.5rem,6vw,6rem)}
@@ -521,9 +521,9 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#ai-usage">AI</a>
+    <a href="#projects">Own projects</a>
     <a href="#cases">Case Studies</a>
     <a href="#product-os">Approach</a>
-    <a href="#projects">Own projects</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-actions">
@@ -548,7 +548,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-tag"><span class="dot"></span> Open to Product Manager Roles &nbsp;·&nbsp; 2026</div>
+      <div class="hero-tag"><span class="dot"></span> Open to Product Manager Roles</div>
       <h1 class="hero-name">Artur<br><span class="name-accent">Khryshchanovich</span></h1>
       <p class="hero-role"><span id="typed">Product Manager</span><span style="opacity:0.5">|</span></p>
       <p class="hero-desc">Building products users love - from zero-to-one launches to scaling mature platforms. Obsessed with data-driven discovery, hypothesis-led execution, and AI-augmented teams.</p>
@@ -710,7 +710,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
         <div class="skill-bar-item"><h4>Product Strategy & Roadmapping <span>75%</span></h4><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
         <div class="skill-bar-item"><h4>Customer Discovery & Research <span>70%</span></h4><div class="bar-track"><div class="bar-fill" style="width:70%;animation-delay:0.1s"></div></div></div>
         <div class="skill-bar-item"><h4>Data Analytics & A/B Testing <span>75%</span></h4><div class="bar-track"><div class="bar-fill" style="width:75%;animation-delay:0.2s"></div></div></div>
-        <div class="skill-bar-item"><h4>Growth & Monetization <span>78%</span></h4><div class="bar-track"><div class="bar-fill" style="width:78%;animation-delay:0.3s"></div></div></div>
+        <div class="skill-bar-item"><h4>Growth & Monetization <span>60%</span></h4><div class="bar-track"><div class="bar-fill" style="width:60%;animation-delay:0.3s"></div></div></div>
         <div class="skill-bar-item"><h4>Content Marketing & Brand <span>75%</span></h4><div class="bar-track"><div class="bar-fill" style="width:75%;animation-delay:0.4s"></div></div></div>
         <div class="skill-bar-item"><h4>AI Tools & Automation <span>82%</span></h4><div class="bar-track"><div class="bar-fill" style="width:82%;animation-delay:0.5s"></div></div></div>
         <div class="skill-bar-item"><h4>Technical Depth (Engineering) <span>70%</span></h4><div class="bar-track"><div class="bar-fill" style="width:70%;animation-delay:0.6s"></div></div></div>
@@ -785,7 +785,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div class="roadmap-items">
         <div class="rm-item">
           <div class="rm-left">
-            <div class="rm-period">2016 - 2020</div>
+            <div class="rm-period">2015 - 2020</div>
             <div class="rm-title">Engineering Foundation</div>
             <div class="rm-desc">BNTU degree in Industrial Automation. Learned systems thinking, CAD, and how things are actually built - a foundation that makes me a stronger PM when working with engineering teams.</div>
             <span class="rm-tag">BNTU</span><span class="rm-tag">AutoCAD</span><span class="rm-tag">Systems Thinking</span>
@@ -890,7 +890,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
             </div>
             <div>
               <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:0.15rem">AI Product · Side Project</div>
-              <div style="font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--text)">DocBot</div>
+              <div style="font-family:'Inter',sans-serif;font-size:1.25rem;color:var(--text)">DocBot</div>
             </div>
           </div>
           <a href="https://arthurvate.github.io/DocBot/" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.4rem 1rem;border-radius:50px;background:var(--accent);color:#06231f;font-size:0.78rem;font-weight:700;text-decoration:none;transition:all 0.2s;flex-shrink:0" onmouseover="this.style.background='var(--accent2)'" onmouseout="this.style.background='var(--accent)'">
@@ -1015,7 +1015,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <h2 class="section-title">Education & Certifications</h2>
     <div class="edu-grid">
       <div class="edu-card reveal">
-        <div class="edu-year">2016 - 2020</div>
+        <div class="edu-year">2015 - 2020</div>
         <h3>Belarusian National Technical University</h3>
         <p>Faculty of Mechanical Engineering<br>Specialization: Automation of Technological Processes and Production<br><span style="color:var(--text3)">Bachelor's Degree · Higher Education</span></p>
       </div>
@@ -1058,10 +1058,6 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <a href="https://wa.me/375336201260" class="contact-link" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
         WhatsApp
-      </a>
-      <a href="viber://chat?number=375336201260" class="contact-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 0C5.5.3.6 5.4.6 11.3c0 2.2.6 4.3 1.8 6.1L.6 24l6.8-1.8c1.7 1 3.6 1.5 5.6 1.5h.1c5.9 0 10.7-4.9 10.7-10.9C23.8 6.9 20.2 2.3 15.5.6 14.2.2 12.8 0 11.4 0zm5.6 16.5c-.3.8-1.5 1.5-2.1 1.6-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.3-.3.6-.3.8-.3s.4 0 .5 0c.2 0 .4.1.6.5.2.4.7 1.7.8 1.8.1.2.1.3 0 .5s-.2.3-.3.4c-.1.1-.2.3-.3.4-.1.1-.2.2-.1.4.3.6.9 1.4 1.5 1.9.7.6 1.3.8 1.5.9.2.1.4.1.5-.1l.4-.5c.2-.3.4-.2.6-.1.2.1 1.4.6 1.6.7.2.1.4.2.4.3.1.2 0 .9-.3 1.7z"/></svg>
-        Viber
       </a>
     </div>
     <button class="btn-primary" onclick="window.print()" style="margin:0 auto;display:flex">↓ Download Resume PDF</button>
@@ -1107,7 +1103,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
 
 
 <footer>
-  <p>© 2026 Artur Khryshchanovich · Product Manager</p>
+  <p>© 2026 Artur Khryshchanovich</p>
 </footer>
 
 <script>
@@ -1143,7 +1139,7 @@ new Chart(radarCtx, {
   data: {
     labels: ['Strategy','Research','Analytics','Growth','Leadership','AI/Tech','Marketing','Execution'],
     datasets: [{
-      data: [85,80,75,78,75,82,75,82],
+      data: [75,70,75,60,78,82,75,70],
       backgroundColor: 'rgba(45,212,191,0.15)',
       borderColor: 'rgba(45,212,191,0.8)',
       borderWidth: 2,
@@ -1156,6 +1152,7 @@ new Chart(radarCtx, {
   options: {
     responsive:true,
     maintainAspectRatio:true,
+    layout:{padding:20},
     scales:{r:{min:0,max:100,
       ticks:{display:false,stepSize:25},
       grid:{color:'rgba(255,255,255,0.07)'},
@@ -1282,7 +1279,7 @@ window.addEventListener('scroll', () => {
     },
     {
       keys: ['contact','email','phone','reach','hire','telegram','whatsapp','viber','linkedin','связаться','контакт'],
-      a: "You can reach Artur via:<br>📧 <a href='mailto:arthurvate@gmail.com'>Artur.Khryshchanovich@gmail.com</a><br>📞 +375 33 620 12 60<br>💬 Telegram, WhatsApp, Viber - all via the same number<br>💼 <a href='https://www.linkedin.com/in/artur-vate-53b09a40b/' target='_blank'>LinkedIn</a><br>Scroll to the Contact section for clickable buttons!"
+      a: "You can reach Artur via:<br>📧 <a href='mailto:arthurvate@gmail.com'>Artur.Khryshchanovich@gmail.com</a><br>📞 +375 33 620 12 60<br>💬 Telegram, WhatsApp - all via the same number<br>💼 <a href='https://www.linkedin.com/in/artur-vate-53b09a40b/' target='_blank'>LinkedIn</a><br>Scroll to the Contact section for clickable buttons!"
     },
     {
       keys: ['location','where','based','minsk','warsaw','remote','relocat','город','живёт'],
@@ -1443,59 +1440,6 @@ window.addEventListener('scroll', () => {
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape' && opened) closeChat();
   });
-})();
-
-// Background music - autoplay (muted first, unmute on interaction)
-(function(){
-  const audio = document.getElementById('bgMusic');
-  const btn = document.getElementById('musicToggle');
-  audio.volume = 0.25;
-  audio.muted = true;
-
-  function tryAutoplay(){
-    audio.play().then(() => {
-      btn.classList.add('playing');
-    }).catch(() => {
-      // Autoplay blocked entirely - wait for interaction
-    });
-  }
-  tryAutoplay();
-
-  function unmuteOnce(){
-    if(audio.muted){
-      audio.muted = false;
-      if(audio.paused) audio.play().catch(()=>{});
-      btn.classList.add('playing');
-    }
-    document.removeEventListener('click', unmuteOnce);
-    document.removeEventListener('scroll', unmuteOnce);
-    document.removeEventListener('keydown', unmuteOnce);
-    document.removeEventListener('touchstart', unmuteOnce);
-  }
-  document.addEventListener('click', unmuteOnce, {once:true});
-  document.addEventListener('scroll', unmuteOnce, {once:true});
-  document.addEventListener('keydown', unmuteOnce, {once:true});
-  document.addEventListener('touchstart', unmuteOnce, {once:true});
-
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if(audio.paused || audio.muted){
-      audio.muted = false;
-      audio.play().catch(()=>{});
-      btn.classList.add('playing');
-    } else {
-      audio.pause();
-      btn.classList.remove('playing');
-    }
-  });
-
-  // Pause music when any video on the page plays
-  document.addEventListener('play', (e) => {
-    if(e.target.tagName === 'VIDEO' && !audio.paused){
-      audio.pause();
-      btn.classList.remove('playing');
-    }
-  }, true);
 })();
 
 </script>
